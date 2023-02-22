@@ -26,8 +26,11 @@ import operator
 import random
 import io
 import numpy as np
+#~dk
+#import keras
+from tensorflow import keras
+
 from keras.utils import to_categorical
-import keras
 import matplotlib.pyplot as plt
 from urllib.parse import urlparse
 import requests

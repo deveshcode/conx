@@ -38,7 +38,13 @@ import re
 import os
 
 import numpy as np
-import keras
+#~dk
+#import keras
+from tensorflow import keras
+
+#~dk
+from tensorflow.keras.layers import Layer, InputSpec
+
 import keras.backend as K
 from keras.optimizers import (SGD, RMSprop, Adagrad, Adadelta, Adam, Adamax, Nadam,
                               TFOptimizer)
@@ -833,7 +839,9 @@ for (name, obj) in inspect.getmembers(keras_module):
                 "Add", "Subtract", "Multiply", "Average",
                 "Maximum", "Concatenate", "Dot", "Lambda"]:
         continue
-    if type(obj) == type and issubclass(obj, (keras.engine.Layer, )):
+	#~dk
+    #if type(obj) == type and issubclass(obj, (keras.engine.Layer, )):
+    if type(obj) == type and issubclass(obj, (Layer, )):
         new_name = "%sLayer" % name
         docstring = obj.__doc__
         if pypandoc:

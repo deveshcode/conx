@@ -30,7 +30,9 @@ import sys
 from IPython.display import display
 from functools import reduce
 import types
-import keras
+#~dk
+#import keras
+from tensorflow import keras
 import operator
 import os
 
